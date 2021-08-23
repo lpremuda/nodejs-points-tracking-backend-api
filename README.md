@@ -1,5 +1,7 @@
 # Points Tracking Backend API
 
+## Note: Node/Express was used for this project due to its ease of use and speed to complete. If another language/framework is desired, such as an object-oriented one, I can do that as well.
+<br><br>
 
 ## How to Install
 
@@ -25,7 +27,9 @@ Server runs on port 5000, by default (http://localhost:5000). To change the port
 <br><br>
 
 ## Database Management
-At server startup, **./database/mock-db-all-transactions-original.json** is copied over to **./database/mock-db-all-transactions.json** and **./database/mock-db-unspent-transactions.json**.
+I chose to use a simple JSON file storage system to store the data.\
+\
+On server startup, **./database/mock-db-all-transactions-original.json** is copied over to **./database/mock-db-all-transactions.json** and **./database/mock-db-unspent-transactions.json**.
 
 While the server is running, the data is persisted in these two initialized .json files:\
 \
