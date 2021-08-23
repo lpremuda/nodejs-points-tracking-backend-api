@@ -1,0 +1,31 @@
+###
+
+GET http://localhost:5000/transactions/all
+
+###
+
+POST http://localhost:5000/spend
+Content-Type: application/json
+
+{
+  "spend": 5000
+}
+
+###
+
+GET http://localhost:5000/balances
+
+###
+
+GET http://localhost:5000/transactions/unspent
+
+###
+
+POST http://localhost:5000/transactions
+Content-Type: application/json
+
+{
+  "payer": "DANNON",
+  "points": 2000
+}
+

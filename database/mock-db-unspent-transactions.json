@@ -1,0 +1,32 @@
+[
+  {
+    "payer": "DANNON",
+    "points": 0,
+    "timestamp": "2020-10-31T10:00:00Z"
+  },
+  {
+    "payer": "UNILEVER",
+    "points": 0,
+    "timestamp": "2020-10-31T11:00:00Z"
+  },
+  {
+    "payer": "DANNON",
+    "points": 0,
+    "timestamp": "2020-10-31T15:00:00Z"
+  },
+  {
+    "payer": "MILLER",
+    "points": 300,
+    "timestamp": "2020-11-01T14:00:00Z"
+  },
+  {
+    "payer": "DANNON",
+    "points": 1000,
+    "timestamp": "2020-11-02T14:00:00Z"
+  },
+  {
+    "payer": "DANNON",
+    "points": 2000,
+    "date": "2021-08-23T03:06:49.290Z"
+  }
+]
