@@ -1,7 +1,7 @@
 # Points Tracking Backend API
 
 ## Note: Node/Express was used for this project due to its ease of use and speed to complete. If another language/framework is desired, such as an object-oriented one, I can do that as well.
-<br><br>
+<br>
 
 ## How to Install
 
