@@ -21,8 +21,8 @@ Start the server:
 ### `npm start`
 <br>
 
-App runs on port 5000, by default (http://localhost:5000). To change the port number, change the **PORT** variable in **./config.js**.\
- 
+Server runs on port 5000, by default (http://localhost:5000). To change the port number, change the **PORT** variable in **./config.js**.
+<br><br>
 
 ## Database Management
 At server startup, **./database/mock-db-all-transactions-original.json** is copied over to **./database/mock-db-all-transactions.json** and **./database/mock-db-unspent-transactions.json**.
@@ -42,12 +42,13 @@ A complete database showing all transactions.
 
 ### mock-db-unspent-transactions.json
 A complete database showing all transactions, with the addition of points being deducted as the user spends points via the **/spend** endpoint. Upon first call to the **/spend** endpoint, the transactions will be sorted by transaction timestamp from oldest to newest. Refer to the below API call to **/transactions/unspent** to see how unspent-transactions is used. 
+<br><br>
 
 ## How to Use the API
 
 ***Refer to the **"./client.rest"** file, which runs using the VS Code Extension called "REST Client" by Huachao Mao.***
 
-#### View all transactions
+### View all transactions
 
 Send this REST command:
 > GET http://localhost:5000/transactions/all
@@ -81,7 +82,7 @@ Server response:
 >          } <br>
 > ] <br>
 
- #### Spend points
+ ### Spend points
 
 Send this REST command:
 > POST http://localhost:5000/spend <br>
@@ -98,7 +99,7 @@ Server response:
 >   "MILLER": -4700 <br>
 > } <br>
 
-#### View balance (broken out by payer):
+### View balance (broken out by payer):
 
 Send this REST command:
 > GET http://localhost:5000/balances
@@ -110,12 +111,13 @@ Server response:
 >   "MILLER": 5300 <br>
 > } <br>
 
-#### View unspent transactions
+### View unspent transactions
 
 Send this REST command:
 > GET http://localhost:5000/transactions/unspent
 
-Server response:
+Server response:\
+Note: Some transactions now have 0 points because the points from the **/spend** API call were decremented using the oldest transactions first.
 > [ <br>
 >   { <br>
 >     "payer": "DANNON", <br>
@@ -144,9 +146,10 @@ Server response:
 >   } <br>
 > ] <br>
 
-#### Add a transaction
+### Add a transaction
 
 Send this REST command:
+Note: Server automatically adds the "timestamp" key to the object with the current date and time.\
 > POST http://localhost:5000/transactions\
 > Content-Type: application/json\
 > \
@@ -156,7 +159,7 @@ Send this REST command:
 > }
 
 Server response:\
-Note: Server responds will all data from **./database/mock-db-all-transactions.json**
+Note: Server responds with all data from **./database/mock-db-all-transactions.json**
 > [\
 >   {\
 >     "payer": "DANNON",\
@@ -190,7 +193,7 @@ Note: Server responds will all data from **./database/mock-db-all-transactions.j
 >   }\
 > ]
 
-#### Continue to spend points until you run out and receive an error message
+### Continue to spend points until you run out and receive an error message
 
 Server response:
 > {\
