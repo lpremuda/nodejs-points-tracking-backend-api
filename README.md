@@ -1,7 +1,7 @@
 # Points Tracking Backend API
 
 ## Note: Node/Express was used for this project due to its ease of use and speed to complete. If another language/framework is desired, such as an object-oriented one, I can do that as well.
-<br>
+<br><br>
 
 ## How to Install
 
@@ -153,8 +153,8 @@ Note: Some transactions now have 0 points because the points from the **/spend**
 ### Add a transaction
 
 Send this REST command:
-Note: Server automatically adds the "timestamp" key to the object with the current date and time.\
-> POST http://localhost:5000/transactions\
+Note: Server automatically adds the "timestamp" key to the object with the current date and time.
+> POST http://localhost:5000/transactions \
 > Content-Type: application/json\
 > \
 > {\
